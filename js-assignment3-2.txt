@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="username" placeholder="Enter user name" /></br></br>
+        <input type="text" id="password" placeholder="enter the password" /></br></br>
+        <input type="button" id="button" value="sign In" disabled onclick="login()" ></button>
+        <p id="error" style="color:red"></p>
+    </form>
+    <script>
+        document.getElementById('username').addEventListener('click',function(){
+            let user1=document.getElementById('username').value;
+            let invalidateMessage=document.getElementById('error');
+            for(let i=0;i<username.length;i++){
+            if(username.charAt(i)==" "){
+                error.innerHTML="Invalid Credentials"; 
+            }
+            else{
+                error.innerHTML=" ";
+            }
+        }
+        })
+        let user2=document.getElementById('password').value;
+        let error=document.getElementById('error');
+        for(let i=0;i<username.length;i++){
+            if(password.charAt(i)==" "){
+                error.innerHTML="Invalid Credentials"; 
+            }
+            else{
+                error.innerHTML=" ";
+            }
+        }
+         document.getElementById('username').addEventListener('focusout',function(){
+            let username=document.getElementById('username').value;
+            if(username.length>2){
+                document.getElementById('button').disabled=false;
+            }
+        })
+
+        function login() {
+             var res1=document.getElementById("username").value
+             var res2=document.getElementById("password").value
+             var result1=res1.toLowerCase();
+             var result2=res2.toLowerCase();
+             
+            
+            if (result1 == 'citiustech' && result2 == "citiustech") {
+                window.open("https://www.google.com/", '','toolbar = no');
+            }
+            else {
+                error.innerHTML = "Invalid Credentials";
+
+            }
+        }
+       
+       
+        
+    </script>
+</body>
+
+</html>
