@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    Email:<input type="text" id="mail" placeholder="enter email id"><br><br>
+    <button type="button" id="button">show Email</button><br><br>
+    <div id="displayText" style="height: 30px;width: 300px;background-color: aliceblue;padding: 10px;"></div>
+<script>
+    $(function(){
+        $("#button").click(function(){
+            let result=document.getElementById('mail').value;
+            $("#displayText").text(result);
+        })
+    })
+</script>
+</body>
+</html>

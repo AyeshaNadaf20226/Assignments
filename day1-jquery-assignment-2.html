@@ -1,0 +1,53 @@
+<!-- 2. Create an HTML5 page as follows:
+a. Two empty <div> elements. The id of each must be div1 and div2 respectively.
+    b. Two textboxes without ids.
+    c. Two textareas without ids.
+    d. A button titled Apply Style to TextBoxes. When this button is clicked, draw a red border around each textarea.
+    e. A button titled Apply Style to first div . When this button is clicked, write some text only inside the first
+    <div> element.
+        f. A button titled Say Hello. When this button is clicked, each textbox and textarea must contain the text
+        HELLO. -->
+
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        </head>
+
+        <body><div>
+            <div id="div1"></div>
+            <div id="div2"></div>
+            
+                <form>
+                    <input type="text" /><br><br>
+                    <input type="text" /><br>
+                    <input type="textarea" /><br>
+                    <input type="textarea" /><br><br>
+                    <button id="button">Apply Style to TextBoxes</button>
+                    <button id="btn1">Apply style to first div</button>
+                    <button id="btn2">Say Hello</button>
+                </form>
+                </div>
+            
+            <script>
+                $(function () {
+                    $("#button").click(function () {
+                        $("textarea").css({ "border" :" solid 4px red" });
+                    });
+                    $("#btn1").click(function () {
+                        $("#div1").html("text inside first div element")
+                    });
+                    $("#btn2").click(function () {
+                        $("#text").html("Hello");
+                        $("#textarea").html("Hello");
+                    });
+                });
+            </script>
+        </body>
+
+        </html>
