@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+        #oval{
+            width:160px;
+            height: 80px;
+            background-color: red;
+            border-radius: 50%;
+            padding-top: 5px;
+            margin: 40px;
+        }
+        </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $(function(){
+        $("#dialog").dialog();
+        $("#btn").click(function(){
+            $("#dialog").dialog('close');
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="dialog" title="Attention" style="background-color: black;">
+        <div id="oval" style="text-align: center;position: relative;">
+            <h1 style="color:white">Danger</h1></div>
+            <p style="color:white">Are you sure you want to do this</p>
+            <div id="button" style="text-align: right;"><button id="btn" value="Yes,I do">Yes,I do</button>
+                <input type="submit" value="No"></div>
+            </div>

@@ -19,32 +19,43 @@ a. Two empty <div> elements. The id of each must be div1 and div2 respectively.
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         </head>
 
-        <body><div>
-            <div id="div1"></div>
-            <div id="div2"></div>
+        <body>
+           
             
-                <form>
+            
                     <input type="text" /><br><br>
-                    <input type="text" /><br>
-                    <input type="textarea" /><br>
-                    <input type="textarea" /><br><br>
-                    <button id="button">Apply Style to TextBoxes</button>
-                    <button id="btn1">Apply style to first div</button>
-                    <button id="btn2">Say Hello</button>
+                    <input type="text" /><br><br>
+                    <div id="div1" style="height:20px;width:400px;background-color:rgb(186, 241, 188);padding:10px;"></div><br><br>
+                    <div id="div2" style="height:20px;width:400px;background-color:rgb(186, 220, 241);padding:10px;"></div><br><br>>
+                    <textarea rows="5" cols="100"></textarea><br><br>
+                    <textarea rows="5" cols="100"></textarea><br><br>
+                    <button id="btn">Apply Style to TextBoxes</button>
+                    <button id="bn1">Apply style to first div</button>
+                    <button id="bn2">Say Hello</button>
                 </form>
                 </div>
             
             <script>
                 $(function () {
-                    $("#button").click(function () {
-                        $("textarea").css({ "border" :" solid 4px red" });
+                    $("#btn").click(function () {
+                        $("textarea").css({ "border": " solid 4px red" });
                     });
-                    $("#btn1").click(function () {
-                        $("#div1").html("text inside first div element")
+                });
+                    $(function () {
+                    $("#bn1").click(function () {
+                        $("#div1").text("text inside first div element")
                     });
-                    $("#btn2").click(function () {
-                        $("#text").html("Hello");
-                        $("#textarea").html("Hello");
+                });
+                
+                $(function () {
+                    $("#bn2").click(function () {
+                        
+                        $("textarea",).text(" Say Hello");
+                    });
+                });
+                $(function () {
+                    $("#bn2").click(function(){
+                        $('input').val('Say Hello')
                     });
                 });
             </script>
